@@ -50,6 +50,10 @@ Elde edilen görseller, GoogleNet kullanılarak 1024 boyutunda özellik vektörl
 
 Görsel ön işleme için `img2t7.py` dosyasındaki 72. satıra, veri setinizdeki image dosyanızın yolunu girin ve ardından çalıştırın.
 
+```
+python3 img2t7.py
+```
+
 
 ### Metin Verilerinin Hazırlanması
 
@@ -58,6 +62,10 @@ Metin verileri, **[Learning Deep Representations of Fine-grained Visual Descript
 Her bir karaktere bir sayısal değer atanacak şekilde işlem yapılacak ve bu sayede karakter verileri sayısal formata dönüştürülecektir. Son olarak, işlenen tüm `.txt` dosyaları ve satırları bir araya getirilerek, `60 (txt sayısı) x 201 (karakter sayısı) x 10 (satır sayısı)` boyutlarında tek bir `.t7` dosyasına kaydedilecektir. Her bir sınıf için de ayrı bir `.t7` dosyası oluşturulacaktır.
 
 Metin ön işleme için `txt2t7.py` dosyasındaki 49. satıra, veri setinizdeki text dosyalanızın yolunu girin ve ardından çalıştırın.
+
+```
+python3 txt2t7.py
+```
 
 ### modelin eğitimi
 
