@@ -1,4 +1,4 @@
-# Char-Cnn-Rnn
+# **Char-Cnn-Rnn**
 
 Bu projenin amacı, kendi veri setimizi kullanarak Char-CNN-RNN modelini geliştirmek ve verilerimizi gömmektir (embedding).
 
