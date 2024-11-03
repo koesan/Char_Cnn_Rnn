@@ -29,16 +29,16 @@ dataset/
 │   │   └── ...
 └── images/
     ├── class1/
-    │   ├── resim1.jpg
-    │   ├── resim2.jpg
+    │   ├── dosya1.jpg
+    │   ├── dosya1.jpg
     │   └── ...
     ├── class2/
-    │   ├── resim1.jpg
-    │   ├── resim2.jpg
+    │   ├── dosya1.jpg
+    │   ├── dosya1.jpg
     │   └── ...
     ├── class3/
-    │   ├── resim1.jpg
-    │   ├── resim2.jpg
+    │   ├── dosya1.jpg
+    │   ├── dosya1.jpg
     │   └── ...
 ```
 
@@ -63,16 +63,37 @@ görsel ve metin dosyaları hazırlandıktan sora görsel ve metin verileri içi
 dataset/
 ├── text/
 │   ├── class1/
-│   ├── dosya2.txt
-│   ├── dosya3.txt
-│   └── ...
+│   │   ├── dosya1.txt
+│   │   ├── dosya2.txt
+│   │   └── ...
+│   ├── class2/
+│   │   ├── dosya1.txt
+│   │   ├── dosya2.txt
+│   │   └── ...
+│   ├── class3/
+│   │   ├── dosya1.txt
+│   │   ├── dosya2.txt
+│   │   └── ...
+│   ├── class1.t7
+│   ├── class2.t7
+│   ├── class3.t7
 └── images/
-    ├── resim1.jpg
-    ├── resim2.jpg
-    ├── resim3.jpg
-    └── ...
+    ├── class1/
+    │   ├── dosya1.jpg
+    │   ├── dosya1.jpg
+    │   └── ...
+    ├── class2/
+    │   ├── dosya1.jpg
+    │   ├── dosya1.jpg
+    │   └── ...
+    ├── class3/
+    │   ├── dosya1.jpg
+    │   ├── dosya1.jpg
+    │   └── ...
+    ├── class1.t7
+    ├── class2.t7
+    ├── class3.t7
 ```
-
 
 
 kaynaklar:
