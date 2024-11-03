@@ -58,7 +58,7 @@ Her bir karaktere bir sayısal değer atanacak şekilde işlem yapılacak ve bu 
 
 görsel ve metin dosyaları hazırlandıktan sora görsel ve metin verileri için elinizde her bir sınıf için 1 tane t7 dosyası olması gerekiyor.
 
-
+klasör yapısı aşağıdaki gibi olması gerkiyor.
 ```
 dataset/
 ├── text/
@@ -95,6 +95,10 @@ dataset/
     ├── class3.t7
 ```
 
+ardından modeli eğitmek için aşağıdaki kodu proje klasörünün içinde iken çalıştırın(data_dir kısmına veri setinizin adresini girin)
+```
+python3 sje_train.py --seed 123 --use_gpu True --dataset birds --model_type cvpr --data_dir "file path" --train_split trainval --learning_rate 0.0007 --symmetric True --epochs 200 --checkpoint_dir ckpt --save_file sje_cub_c10_hybrid
+```
 
 kaynaklar:
 
