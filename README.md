@@ -9,7 +9,7 @@ Bu projenin amacı, kendi veri setimizi kullanarak Char-CNN-RNN modelini gelişt
 ### Veri Seti Klasör Yapısı
 
 ```
-veri_seti/
+Dataset/
 ├── text/
 │   ├── dosya1.txt
 │   ├── dosya2.txt
