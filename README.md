@@ -12,6 +12,7 @@ Bu projenin amacı, kendi veri setimizi kullanarak Char-CNN-RNN modelini gelişt
 
 ### Veri Seti Klasör Yapısı
 
+```
 dataset/
 ├── text/
 │   ├── class1/
@@ -39,7 +40,7 @@ dataset/
     │   ├── resim1.jpg
     │   ├── resim2.jpg
     │   └── ...
-
+```
 
 ### Görsel verilerin hazırlanması
 
