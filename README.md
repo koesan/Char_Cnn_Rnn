@@ -4,9 +4,11 @@ bu proje char-cnn-rnn projesinin kullanımını kolaylaştırmak ve anlatmak iç
 
 kaynaklar:
 
-[Char-CNN-RNN for PyTorch GitHun](https://github.com/martinduartemore/char_cnn_rnn_pytorch/tree/master)
+[Char-CNN-RNN for PyTorch GitHub](https://github.com/martinduartemore/char_cnn_rnn_pytorch/tree/master)
 
-[char-CNN-RNN GitHun](https://github.com/1o0ko/char-CNN-RNN)
+[char-CNN-RNN GitHub](https://github.com/1o0ko/char-CNN-RNN)
+
+[charCnnRnn_embedding GitHub](https://github.com/ramidzamzam/charCnnRnn_embedding/tree/main)
 
 [cvpr2016](https://github.com/reedscot/cvpr2016)
 
