@@ -31,7 +31,7 @@ pip3 install pytorch==2.4.0 torchvision==0.19.0 pillow==10.4.0 tqdm==4.66.5
 
 Öncelikle `txt` ve `img` verilerinin bulunduğu bir veri seti oluşturmalısınız. Veri setinin yapısı aşağıdaki formatta olmalıdır. Veri seti tek sınıflı ve çok sınıflı olabilir ve resimler `.jpg`, `.png`, `.jpeg` olabilir.
 
-Projede kullanılan veri seti [TXT dosyaları](https://drive.google.com/file/d/0B0ywwgffWnLLZW9uVHNjb2JmNlE/view?resourcekey=0-8y2UVmBHAlG26HafWYNoFQ), [İMG dosyaları](https://data.caltech.edu/records/65de6-vp158)
+Projede kullanılan veri seti [TXT dosyaları](https://drive.google.com/file/d/0B0ywwgffWnLLZW9uVHNjb2JmNlE/view?resourcekey=0-8y2UVmBHAlG26HafWYNoFQ)   [İMG dosyaları](https://data.caltech.edu/records/65de6-vp158)
 ---
 
 ### **Veri Seti Klasör Yapısı**
