@@ -134,14 +134,19 @@ Eğitim bittikten sonra, modeliniz `ckpt` klasörünün içinde olacaktır. Eği
 ```bash
 python3 sje_eval.py --seed 123 --use_gpu True --dataset birds --model_type cvpr --data_dir "file path" --eval_split test --num_txts_eval 0 --print_class_stats True --batch_size 40 --model_path "file path"
 ```
-
 ---
-
-## **Değerlendirme**
 
 ![Screenshot from 2024-10-26 07-28-30](https://github.com/user-attachments/assets/202b9301-cbef-4afb-8772-26e1252a59ff)
 
 ---
+
+## metin gömmeleri oluşturmak için.
+
+** Önceden eğitilmiş modelleri indirmek için **
+[cvpr](https://github.com/reedscot/cvpr2016)
+[icml](https://github.com/reedscot/icml2016)
+
+
 
 ## **Kaynaklar**
 
