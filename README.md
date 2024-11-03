@@ -48,11 +48,16 @@ Görüntü verileri, **[Learning Deep Representations of Fine-grained Visual Des
 
 Elde edilen görseller, GoogleNet kullanılarak 1024 boyutunda özellik vektörlerine dönüştürülecektir. Bu özellik çıkarımı sürecinde, her görsel için kırpılan parçalar üzerinde işlem yapılacak ve sonuçta elde edilen çıktılar, `60 (görsel sayısı) x 1024 (özellik vektörü) x 10 (parça sayısı)` boyutunda `.t7` formatında kaydedilecektir. Her sınıf için bir tane `.t7` dosyası oluşturulacaktır.
 
+Görsel ön işleme için `img2t7.py` dosyasındaki 72. satıra, veri setinizdeki image dosyanızın yolunu girin ve ardından çalıştırın.
+
+
 ### Metin Verilerinin Hazırlanması
 
 Metin verileri, **[Learning Deep Representations of Fine-grained Visual Descriptions Paper](https://arxiv.org/pdf/1605.05395)** makalesinin 5. bölümünde belirtildiği gibi hazırlandı. İlk olarak, her bir `.txt` dosyası satır satır okunacak ve her bir `.txt` dosyasında toplamda 10 satır bulunması gerekmektedir. Ardından, okunan satırlar 201 boyutundaki karakterlere ayrılacak şekilde işlenecektir. Eğer bir satır 201 karakterden daha uzun ise, fazla karakterler silinecek; eğer 201 karakterden daha kısa ise, eksik olan kısımlar sıfırlar ile doldurulacaktır.
 
 Her bir karaktere bir sayısal değer atanacak şekilde işlem yapılacak ve bu sayede karakter verileri sayısal formata dönüştürülecektir. Son olarak, işlenen tüm `.txt` dosyaları ve satırları bir araya getirilerek, `60 (txt sayısı) x 201 (karakter sayısı) x 10 (satır sayısı)` boyutlarında tek bir `.t7` dosyasına kaydedilecektir. Her bir sınıf için de ayrı bir `.t7` dosyası oluşturulacaktır.
+
+Metin ön işleme için `txt2t7.py` dosyasındaki 49. satıra, veri setinizdeki text dosyalanızın yolunu girin ve ardından çalıştırın.
 
 ### modelin eğitimi
 
@@ -96,7 +101,7 @@ dataset/
     ├── class3.t7
 ```
 
-Ardından, modeli eğitmek için aşağıdaki kodu proje klasörünün içinde çalıştırın. `data_dir` kısmına veri setinizin yolunu girin.
+Modeli eğitmek için aşağıdaki kodu proje klasörünün içinde çalıştırın. `data_dir` kısmına veri setinizin yolunu girin.
 
 ```
 python3 sje_train.py --seed 123 --use_gpu True --dataset birds --model_type cvpr --data_dir "file path" --train_split trainval --learning_rate 0.0007 --symmetric True --epochs 200 --checkpoint_dir ckpt --save_file sje_cub_c10_hybrid
