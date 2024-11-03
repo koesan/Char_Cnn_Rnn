@@ -29,7 +29,7 @@ pip3 install pytorch==2.4.0 torchvision==0.19.0 pillow==10.4.0 tqdm==4.66.5
 
 ## **Kullanım**
 
-Öncelikle `txt` ve `img` verilerinin bulunduğu bir veri seti oluşturmalısınız. Veri setinin yapısı aşağıdaki formatta olmalıdır (Resimler `.jpg`, `.png`, `.jpeg` olabilir).
+Öncelikle `txt` ve `img` verilerinin bulunduğu bir veri seti oluşturmalısınız. Veri setinin yapısı aşağıdaki formatta olmalıdır. Veri seti tek sınıflı ve çok sınıflı olabilir ve resimler `.jpg`, `.png`, `.jpeg` olabilir.
 
 ---
 
@@ -69,9 +69,9 @@ dataset/
 
 Görüntü verileri, **[Learning Deep Representations of Fine-grained Visual Descriptions Paper](https://arxiv.org/pdf/1605.05395)** makalesinin 5. bölümünde belirtildiği gibi hazırlandı. 
 
-Öncelikle, her görsel toplamda 10 parçaya ayrılacak. Bu parçalar, her görselin sol üst, sol alt, sağ üst, sağ alt ve orta kısımlarının kırpılmasıyla elde edilecektir. Ardından, görsel yatay çevrilmesiyle aynı işlemler tekrar edilerek toplamda 10 görsel elde edilecektir.
+Öncelikle, her görsel toplamda 10 parçaya ayrılacak. Bu parçalar, her görselin sol üst, sol alt, sağ üst, sağ alt ve orta kısımlarının kırpılmasıyla elde edilecektir. Ardından, görsel yatay çevrilmesiyle aynı işlemler tekrar edilerek toplamda 10 görsel elde edilir.
 
-Elde edilen görseller, GoogleNet kullanılarak 1024 boyutunda özellik vektörlerine dönüştürülecektir. Bu özellik çıkarımı sürecinde, her görsel için kırpılan parçalar üzerinde işlem yapılacak ve sonuçta elde edilen çıktılar, 60 (görsel sayısı) x 1024 (özellik vektörü) x 10 (parça sayısı) boyutunda `.t7` formatında kaydedilecektir. Her sınıf için bir tane `.t7` dosyası oluşturulacaktır.
+Elde edilen görseller, GoogleNet kullanılarak 1024 boyutunda özellik vektörlerine dönüştürülür. Bu özellik çıkarımı sürecinde, her görsel için kırpılan parçalar üzerinde işlem yapılacak ve sonuçta elde edilen çıktılar, 60 (görsel sayısı) x 1024 (özellik vektörü) x 10 (parça sayısı) boyutunda `.t7` formatında kaydedilir. Her sınıf için bir tane `.t7` dosyası oluşturulacak.
 
 Görsel ön işleme için `img2t7.py` dosyasındaki 72. satıra, veri setinizdeki `image` dosyanızın yolunu girin ve ardından çalıştırın.
 
@@ -83,9 +83,9 @@ python3 img2t7.py
 
 Metin verileri, **[Learning Deep Representations of Fine-grained Visual Descriptions Paper](https://arxiv.org/pdf/1605.05395)** makalesinin 5. bölümünde belirtildiği gibi hazırlandı. 
 
-İlk olarak, her bir `.txt` dosyası satır satır okunacak ve her bir `.txt` dosyasında toplamda 10 satır bulunması gerekmektedir. Ardından, okunan satırlar 201 boyutundaki karakterlere ayrılacak şekilde işlenecektir. Eğer bir satır 201 karakterden daha uzun ise, fazla karakterler silinecek; eğer 201 karakterden daha kısa ise, eksik olan kısımlar sıfırlarla doldurulacaktır.
+İlk olarak, her bir `.txt` dosyası satır satır okunacak ve her bir `.txt` dosyasında toplamda 10 satır bulunması gerekmektedir. Ardından, okunan satırlar 201 boyutundaki karakterlere ayrılacak şekilde işlenir. Eğer bir satır 201 karakterden daha uzun ise, fazla karakterler silinir; eğer 201 karakterden daha kısa ise, eksik olan kısımlar sıfırlarla doldurulur.
 
-Her bir karaktere bir sayısal değer atanacak şekilde işlem yapılacak ve bu sayede karakter verileri sayısal formata dönüştürülecektir. Son olarak, işlenen tüm `.txt` dosyaları ve satırları bir araya getirilerek, 60 (txt sayısı) x 201 (karakter sayısı) x 10 (satır sayısı) boyutlarında tek bir `.t7` dosyasına kaydedilecektir. Her bir sınıf için de ayrı bir `.t7` dosyası oluşturulacaktır.
+Her bir karaktere bir sayısal değer atanacak şekilde işlem yapılır ve bu sayede karakter verileri sayısal formata dönüştürülür. Son olarak, işlenen tüm `.txt` dosyaları ve satırları bir araya getirilerek, 60 (txt sayısı) x 201 (karakter sayısı) x 10 (satır sayısı) boyutlarında tek bir `.t7` dosyasına kaydedilir. Her bir sınıf için de ayrı bir `.t7` dosyası oluşturulacak.
 
 Metin ön işleme için `txt2t7.py` dosyasındaki 49. satıra, veri setinizdeki `text` dosyalarının yolunu girin ve ardından çalıştırın.
 
@@ -160,12 +160,13 @@ python3 sje_eval.py --seed 123 --use_gpu True --dataset birds --model_type cvpr 
 [cvpr](https://github.com/reedscot/cvpr2016)
 [icml](https://github.com/reedscot/icml2016)
 
-Eğitilmiş model ile metinleri gömmek için `Text_embedding.py` dosyasının 42. satırında yer alan `model_path` kısmına modelin dosya yolunu ekleyin. Ardından `root_dir` kısımlarını doldurun.
+Eğitilmiş model ile metinleri gömmek için `Text_embedding.py` dosyasının 42. satırında yer alan `model_path` kısmına modelin dosya yolunu ekleyin. Ardından `root_dir` kısmına gömmek isteidğiniz txt dosyalarının yolunu girin.
 
 ```bash
 python3 Text_embedding.py
 ```
 
+***
 
 ## **Kaynaklar**
 
