@@ -1,7 +1,5 @@
 import random
 import torch
-import torchfile
-
 from char_cnn_rnn import char_cnn_rnn
 
 
@@ -34,7 +32,7 @@ def extract_char_cnn_rnn_weights(model_path, dataset, model_type):
     assert model_type in ['cvpr', 'icml'], \
             'Dataset must be (cvpr|icml)'
 
-    model_torch = torchfile.load(model_path)
+    model_torch = torch.load(model_path)
     enc_doc = model_torch[b'protos'][b'enc_doc']
     model_pytorch = char_cnn_rnn(dataset, model_type)
 
