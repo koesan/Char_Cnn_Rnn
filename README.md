@@ -28,7 +28,7 @@ dataset/
 
 ### görsel verilerin hazırlanması
 
-Görüntü verileri, Learning Deep Representations of Fine-grained Visual Descriptions makalesinin 5. bölümünde belirtildiği gibi hazırlandı. Öncelikle görseller toplam 10 (görselin sol üst, sol alt, sağ üst, sağ alt, orta kısmı kırpılır arıdndan görsel çevrilerek aynı şekilde 5 tane daha görsel kırpılır sonuç olarak 10 tane görsel elde edilecek) parçaya ayrılacaktır. Ardından, tüm görseller GoogleNet kullanılarak, özellik çıkarımı sırasında 1024 boyutunda özellik vektörlerine dönüştürülecektir. Elde edilen çıktılar, 60 (görsel sayısı) x 1024 (özellik vektörü) x 10 (parça sayısı) boyutunda .t7 formatında kaydedilecektir. Her sınıf için birtane t7 dosyası oluşturulacak.
+Görüntü verileri, Learning Deep Representations of Fine-grained Visual Descriptions makalesinin 5. bölümünde belirtildiği gibi hazırlandı. Öncelikle görseller toplam 10 (görselin sol üst, sol alt, sağ üst, sağ alt, orta kısmı kırpılır arıdndan görsel çevrilerek aynı şekilde 5 tane daha görsel kırpılır sonuç olarak 10 tane görsel elde edilecek) parçaya ayrılacaktır. Ardından, tüm görseller GoogleNet kullanılarak her görsel, 1024 boyutunda özellik vektörlerine dönüştürülecektir. Elde edilen çıktılar, 60 (görsel sayısı) x 1024 (özellik vektörü) x 10 (parça sayısı) boyutunda .t7 formatında kaydedilecektir. Her sınıf için birtane t7 dosyası oluşturulacak.
 
 
 
