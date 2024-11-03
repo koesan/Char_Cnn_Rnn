@@ -1,6 +1,29 @@
 # Char-Cnn-Rnn
 
-bu proje char-cnn-rnn projesinin kullanımını kolaylaştırmak ve anlatmak içingeliştirildi.
+Bu projenin amacı, kendi veri setimizi kullanarak Char-CNN-RNN modelini geliştirmek ve verilerimizi gömmektir (embedding).
+
+## Gereksinimler
+
+öncelikle elinide txt ve img verileri bununması gerkeiyor
+
+### Veri Seti Klasör Yapısı
+
+- **veri_seti** (Ana Klasör)
+  - **text** (Metin Klasörü)
+    - `dosya1.txt`
+    - `dosya2.txt`
+    - `dosya3.txt`
+    - ...
+  - **img** (Görsel Klasörü)
+    - `resim1.jpg`
+    - `resim2.jpg`
+    - `resim3.jpg`
+    - ...
+
+
+
+## kullanım:
+
 
 kaynaklar:
 
