@@ -2,13 +2,18 @@
 
 Bu projenin amacı, kendi veri setimizi kullanarak Char-CNN-RNN modelini geliştirmek ve verilerimizi gömmektir (embedding).
 
+***
+
 ## Gereksinimler
 
 
+***
 
 ## kullanım:
 
 Öncelikle txt ve img verileri bununduğu bir veri seti oluşturmalısınız veri setinin yapısı aşağıdaki formatta olamlıdır(Resimler .jpg .png ,jpeg olabilir).
+
+***
 
 ### Veri Seti Klasör Yapısı
 
@@ -53,7 +58,6 @@ Görsel ön işleme için `img2t7.py` dosyasındaki 72. satıra, veri setinizdek
 ```
 python3 img2t7.py
 ```
-
 
 ### Metin Verilerinin Hazırlanması
 
@@ -123,12 +127,14 @@ python3 sje_eval.py --seed 123 --use_gpu True --dataset birds --model_type cvpr 
 
 ***
 
-##Değerlendirme:
+## Değerlendirme:
 
 ![Screenshot from 2024-10-26 07-28-30](https://github.com/user-attachments/assets/202b9301-cbef-4afb-8772-26e1252a59ff)
 
 
-kaynaklar:
+***
+
+## kaynaklar:
 
 [Char-CNN-RNN for PyTorch GitHub](https://github.com/martinduartemore/char_cnn_rnn_pytorch/tree/master)
 
