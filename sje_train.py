@@ -1,6 +1,5 @@
 import os
 import argparse
-import torchfile
 from tqdm import tqdm
 from datetime import datetime
 from torch.utils.tensorboard import SummaryWriter
