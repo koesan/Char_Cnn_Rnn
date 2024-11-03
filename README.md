@@ -102,6 +102,12 @@ Ardından, modeli eğitmek için aşağıdaki kodu proje klasörünün içinde �
 python3 sje_train.py --seed 123 --use_gpu True --dataset birds --model_type cvpr --data_dir "file path" --train_split trainval --learning_rate 0.0007 --symmetric True --epochs 200 --checkpoint_dir ckpt --save_file sje_cub_c10_hybrid
 ```
 
+Eğitim bittikten sonra, modeliniz `ckpt` klasörünün içinde olacaktır. Eğittiğiniz modeli test edebilmek için aşağıdaki kodu çalıştırın. `data_dir` kısmına veri setinin adresini ve `model_path` kısmına eğittiğiniz modelin adresini ekleyin.
+
+```
+python3 sje_eval.py --seed 123 --use_gpu True --dataset birds --model_type cvpr --data_dir "file path" --eval_split test --num_txts_eval 0 --print_class_stats True --batch_size 40 --model_path "file path"
+```
+
 kaynaklar:
 
 [Char-CNN-RNN for PyTorch GitHub](https://github.com/martinduartemore/char_cnn_rnn_pytorch/tree/master)
