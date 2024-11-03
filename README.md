@@ -146,6 +146,11 @@ python3 sje_eval.py --seed 123 --use_gpu True --dataset birds --model_type cvpr 
 [cvpr](https://github.com/reedscot/cvpr2016)
 [icml](https://github.com/reedscot/icml2016)
 
+Eğitilmiş model ile metinleri gömmek için `Text_embedding.py` dosyasının 7. satırında yer alan `model_path` kısmına modelin dosya yolunu ekleyin. Ardından `text_folder` ve `output_folder` kısımlarını doldurun.
+
+```bash
+python3 Text_embedding.py"
+```
 
 
 ## **Kaynaklar**
