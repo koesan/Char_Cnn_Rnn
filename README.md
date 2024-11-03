@@ -31,7 +31,7 @@ pip3 install pytorch==2.4.0 torchvision==0.19.0 pillow==10.4.0 tqdm==4.66.5
 
 Öncelikle `txt` ve `img` verilerinin bulunduğu bir veri seti oluşturmalısınız. Veri setinin yapısı aşağıdaki formatta olmalıdır. Veri seti tek sınıflı ve çok sınıflı olabilir ve resimler `.jpg`, `.png`, `.jpeg` olabilir.
 
-Projede kullanılan veri seti [TXT dosyaları text_c10 klasöründe](https://drive.google.com/file/d/0B0ywwgffWnLLZW9uVHNjb2JmNlE/view?resourcekey=0-8y2UVmBHAlG26HafWYNoFQ), [İMG dosyaları ımage klasöründe]
+Projede kullanılan veri seti [TXT dosyaları](https://drive.google.com/file/d/0B0ywwgffWnLLZW9uVHNjb2JmNlE/view?resourcekey=0-8y2UVmBHAlG26HafWYNoFQ), [İMG dosyaları](https://data.caltech.edu/records/65de6-vp158)
 ---
 
 ### **Veri Seti Klasör Yapısı**
@@ -159,6 +159,7 @@ python3 sje_eval.py --seed 123 --use_gpu True --dataset birds --model_type cvpr 
 
 ** Önceden eğitilmiş modelleri indirmek için **
 [cvpr](https://github.com/reedscot/cvpr2016)
+
 [icml](https://github.com/reedscot/icml2016)
 
 Eğitilmiş model ile metinleri gömmek için `Text_embedding.py` dosyasının 42. satırında yer alan `model_path` kısmına modelin dosya yolunu ekleyin. Ardından `root_dir` kısmına gömmek isteidğiniz txt dosyalarının yolunu girin.
