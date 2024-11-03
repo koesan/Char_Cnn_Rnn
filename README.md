@@ -10,11 +10,11 @@ kaynaklar:
 
 [charCnnRnn_embedding GitHub](https://github.com/ramidzamzam/charCnnRnn_embedding/tree/main)
 
-[cvpr2016](https://github.com/reedscot/cvpr2016)
+[cvpr2016 GitHub](https://github.com/reedscot/cvpr2016)
 
-[icml2016](https://github.com/reedscot/icml2016)
+[icml2016 GitHub](https://github.com/reedscot/icml2016)
 
-[Generative Adversarial Text to Image Synthesis](https://arxiv.org/abs/1605.05396)
+[Generative Adversarial Text to Image Synthesis Paper](https://arxiv.org/abs/1605.05396)
 
-[Learning Deep Representations of Fine-grained Visual Descriptions](https://arxiv.org/pdf/1605.05395)
+[Learning Deep Representations of Fine-grained Visual Descriptions Paper](https://arxiv.org/pdf/1605.05395)
 
