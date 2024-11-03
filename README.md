@@ -26,10 +26,19 @@ dataset/
     └── ...
 ```
 
-### görsel verilerin hazırlanması
+### Görsel verilerin hazırlanması
 
-Görüntü verileri, Learning Deep Representations of Fine-grained Visual Descriptions makalesinin 5. bölümünde belirtildiği gibi hazırlandı. Öncelikle görseller toplam 10 (görselin sol üst, sol alt, sağ üst, sağ alt, orta kısmı kırpılır arıdndan görsel çevrilerek aynı şekilde 5 tane daha görsel kırpılır sonuç olarak 10 tane görsel elde edilecek) parçaya ayrılacaktır. Ardından, tüm görseller GoogleNet kullanılarak her görsel, 1024 boyutunda özellik vektörlerine dönüştürülecektir. Elde edilen çıktılar, 60 (görsel sayısı) x 1024 (özellik vektörü) x 10 (parça sayısı) boyutunda .t7 formatında kaydedilecektir. Her sınıf için birtane t7 dosyası oluşturulacak.
+Görüntü verileri, **[Learning Deep Representations of Fine-grained Visual Descriptions Paper](https://arxiv.org/pdf/1605.05395)** makalesinin 5. bölümünde belirtildiği gibi hazırlandı. Öncelikle, her görsel toplamda 10 parçaya ayrılacaktır. Bu parçalar, her görselin sol üst, sol alt, sağ üst, sağ alt ve orta kısımlarının kırpılmasıyla elde edilecektir. Ardından, her görselin yatay çevrilmesiyle aynı işlemler tekrar edilerek toplamda 10 görsel elde edilecektir.
 
+Elde edilen görseller, GoogleNet kullanılarak 1024 boyutunda özellik vektörlerine dönüştürülecektir. Bu özellik çıkarımı sürecinde, her görsel için kırpılan parçalar üzerinde işlem yapılacak ve sonuçta elde edilen çıktılar, `60 (görsel sayısı) x 1024 (özellik vektörü) x 10 (parça sayısı)` boyutunda `.t7` formatında kaydedilecektir. Her sınıf için bir tane `.t7` dosyası oluşturulacaktır.
+
+### Metin Verilerinin Hazırlanması
+
+Metin verileri, **[Learning Deep Representations of Fine-grained Visual Descriptions Paper](https://arxiv.org/pdf/1605.05395)** makalesinin 5. bölümünde belirtildiği gibi hazırlandı. İlk olarak, her bir `.txt` dosyası satır satır okunacak ve her bir `.txt` dosyasında toplamda 10 satır bulunması gerekmektedir. Ardından, okunan satırlar 201 boyutundaki karakterlere ayrılacak şekilde işlenecektir. Eğer bir satır 201 karakterden daha uzun ise, fazla karakterler silinecek; eğer 201 karakterden daha kısa ise, eksik olan kısımlar sıfırlar ile doldurulacaktır.
+
+Her bir karaktere bir sayısal değer atanacak şekilde işlem yapılacak ve bu sayede karakter verileri sayısal formata dönüştürülecektir. Son olarak, işlenen tüm `.txt` dosyaları ve satırları bir araya getirilerek, `60 (txt sayısı) x 201 (karakter sayısı) x 10 (satır sayısı)` boyutlarında tek bir `.t7` dosyasına kaydedilecektir. Her bir sınıf için de ayrı bir `.t7` dosyası oluşturulacaktır.
+
+Bu süreç, modelin eğitimi ve değerlendirilmesi için gerekli olan metin verilerinin doğru bir biçimde hazırlanmasını sağlayacaktır.
 
 
 kaynaklar:
