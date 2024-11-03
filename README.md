@@ -1,7 +1,21 @@
 
 # **Char-CNN-RNN**
 
-Bu projenin amacı, kendi veri setimizi kullanarak Char-CNN-RNN modelini geliştirmek ve verilerimizi gömmektir (embedding).
+Bu projenin amacı, kendi veri setimizi kullanarak Char-CNN-RNN modelini geliştirmek ve metinsel verilerimizi gömmektir.
+
+Model, text-image eşleme ve text-to-image gibi ayrıntılı açıklama gerektiren görevlerde oldukça başarılıdır.
+
+### Neden Char-CNN-RNN?
+Char-CNN-RNN modeli, görsel olarak benzer nesneleri tanımak için yüksek detay ve hassasiyet gerektiren durumlarda kullanılır (örneğin, farklı kuş türleri). Karakter seviyesindeki CNN ve RNN yapısı, açıklamalardaki karakter sıralamasını öğrenerek modeli yazım hatalarına karşı dayanıklı hale getirir. Bu özellikleriyle sıfırdan öğrenme (zero-shot learning) senaryolarında başarılıdır.
+
+### Nasıl Çalışır?
+Char-CNN-RNN modeli, metin ve görselleri ortak bir özellik alanında kodlayarak iki modalite arasında güçlü bir eşleşme sağlar. Bu sayede, daha önce görmediği görseller için sadece metin açıklamalarına dayanarak doğru tahminler yapabilir.
+
+### Geleneksel Gömme Modellerine Göre Avantajları
+Word2Vec veya GloVe gibi kelime bazlı gömme modellerinden farklı olarak, Char-CNN-RNN:
+- Karakterleri doğrudan işler, bu sayede kelime formlarındaki varyasyonlara dayanıklıdır.
+- Bağlamı dinamik olarak öğrenir, bu da benzer sınıfları ayırt etme yeteneğini güçlendirir.
+- Yazım hatalarına karşı dayanıklıdır ve sabit bir kelime haznesine bağlı kalmadan daha esnek bir şekilde çalışır.
 
 ---
 
