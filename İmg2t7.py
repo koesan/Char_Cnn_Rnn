@@ -13,8 +13,8 @@ model.eval()
 preprocess = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.ToTensor(),
-    #  transforms.CenterCrop(image_size) kaggledeki bir projedek ullanılıyor
-    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]), #transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)) kagledeki bir projede kullanılan değerler
+    #  transforms.CenterCrop(image_size) 
+    transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5]),
 ])
 
 def create_crops(image):
@@ -42,11 +42,11 @@ def create_crops(image):
     return crops
 
 def process_all_classes(data_folder):
-    for class_folder_name in sorted(os.listdir(data_folder)):  # Klasörleri sıralı şekilde al
+    for class_folder_name in sorted(os.listdir(data_folder)):  
         class_folder = os.path.join(data_folder, class_folder_name)
-        if os.path.isdir(class_folder):  # Sadece klasörleri işlemek için
+        if os.path.isdir(class_folder):  
             features_list = []
-            for image_file in sorted(os.listdir(class_folder)):  # Dosyaları sıralı şekilde al
+            for image_file in sorted(os.listdir(class_folder)): 
                 if image_file.endswith(('.jpg', '.png', '.jpeg')):
                     image_path = os.path.join(class_folder, image_file)
                     image = Image.open(image_path)
@@ -59,7 +59,7 @@ def process_all_classes(data_folder):
                         features_list.append(feature)
             
             # Özellikleri 60 x 10 x 1024 formatında kaydet
-            num_images = len(features_list) // 10  # Toplam görüntü sayısı
+            num_images = len(features_list) // 10 
             features_tensor = torch.tensor(features_list).view(num_images, 10, 1024)  # 60 x 10 x 1024 formatında yeniden şekillendir
             features_tensor = features_tensor.permute(0, 2, 1)  # 60 x 1024 x 10 formatına çevir
             
