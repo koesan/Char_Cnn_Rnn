@@ -8,18 +8,19 @@ Bu projenin amacı, kendi veri setimizi kullanarak Char-CNN-RNN modelini gelişt
 
 ### Veri Seti Klasör Yapısı
 
-- **veri_seti** (Ana Klasör)
-  - **text** (Metin Klasörü)
-    - `dosya1.txt`
-    - `dosya2.txt`
-    - `dosya3.txt`
-    - ...
-  - **img** (Görsel Klasörü)
-    - `resim1.jpg`
-    - `resim2.jpg`
-    - `resim3.jpg`
-    - ...
-
+```
+veri_seti/
+├── text/
+│   ├── dosya1.txt
+│   ├── dosya2.txt
+│   ├── dosya3.txt
+│   └── ...
+└── img/
+    ├── resim1.jpg
+    ├── resim2.jpg
+    ├── resim3.jpg
+    └── ...
+```
 
 
 ## kullanım:
