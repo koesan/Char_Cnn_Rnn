@@ -1,6 +1,5 @@
 import os
 import torch
-import torchfile
 from torch.utils.data import Dataset
 from char_cnn_rnn.char_cnn_rnn import labelvec_to_onehot
 
@@ -22,8 +21,8 @@ class MultimodalDataset(Dataset):
         for cls in self.split_classes:
             path_imgs = os.path.join(data_dir, 'images', cls + '.t7')
             path_txts = os.path.join(data_dir, 'text', cls + '.t7')
-            cls_imgs = torch.Tensor(torchfile.load(path_imgs))
-            cls_txts = torch.LongTensor(torchfile.load(path_txts))
+            cls_imgs = torch.Tensor(torch.load(path_imgs))
+            cls_txts = torch.LongTensor(torch.load(path_txts))
             self.data[cls] = (cls_imgs, cls_txts)
 
             self.num_instances += cls_imgs.size(0)
