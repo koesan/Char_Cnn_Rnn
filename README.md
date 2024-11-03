@@ -4,18 +4,18 @@ Bu projenin amacı, kendi veri setimizi kullanarak Char-CNN-RNN modelini gelişt
 
 ## Gereksinimler
 
-öncelikle elinide txt ve img verileri bununması gerkeiyor
+Öncelikle txt ve img verileri bununduğu bir veri seti oluşturmalısınız veri setinin yapısı aşağıdaki formatta olamlıdır(Resimler .jpg .png ,jpeg olabilir).
 
 ### Veri Seti Klasör Yapısı
 
 ```
-Dataset/
+dataset/
 ├── text/
 │   ├── dosya1.txt
 │   ├── dosya2.txt
 │   ├── dosya3.txt
 │   └── ...
-└── img/
+└── images/
     ├── resim1.jpg
     ├── resim2.jpg
     ├── resim3.jpg
