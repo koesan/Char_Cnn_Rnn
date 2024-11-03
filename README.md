@@ -4,18 +4,18 @@ Bu projenin amacı, kendi veri setimizi kullanarak Char-CNN-RNN modelini gelişt
 
 ***
 
-## Gereksinimler
+## **Gereksinimler**
 
 
 ***
 
-## kullanım:
+## **kullanım**
 
 Öncelikle txt ve img verileri bununduğu bir veri seti oluşturmalısınız veri setinin yapısı aşağıdaki formatta olamlıdır(Resimler .jpg .png ,jpeg olabilir).
 
 ***
 
-### Veri Seti Klasör Yapısı
+### **Veri Seti Klasör Yapısı**
 
 ```
 dataset/
@@ -47,7 +47,7 @@ dataset/
     │   └── ...
 ```
 
-### Görsel verilerin hazırlanması
+### **Görsel verilerin hazırlanması**
 
 Görüntü verileri, **[Learning Deep Representations of Fine-grained Visual Descriptions Paper](https://arxiv.org/pdf/1605.05395)** makalesinin 5. bölümünde belirtildiği gibi hazırlandı. Öncelikle, her görsel toplamda 10 parçaya ayrılacak. Bu parçalar, her görselin sol üst, sol alt, sağ üst, sağ alt ve orta kısımlarının kırpılmasıyla elde edilecektir. Ardından, görsel yatay çevrilmesiyle aynı işlemler tekrar edilerek toplamda 10 görsel elde edilecektir.
 
@@ -59,7 +59,7 @@ Görsel ön işleme için `img2t7.py` dosyasındaki 72. satıra, veri setinizdek
 python3 img2t7.py
 ```
 
-### Metin Verilerinin Hazırlanması
+### **Metin Verilerinin Hazırlanması**
 
 Metin verileri, **[Learning Deep Representations of Fine-grained Visual Descriptions Paper](https://arxiv.org/pdf/1605.05395)** makalesinin 5. bölümünde belirtildiği gibi hazırlandı. İlk olarak, her bir `.txt` dosyası satır satır okunacak ve her bir `.txt` dosyasında toplamda 10 satır bulunması gerekmektedir. Ardından, okunan satırlar 201 boyutundaki karakterlere ayrılacak şekilde işlenecektir. Eğer bir satır 201 karakterden daha uzun ise, fazla karakterler silinecek; eğer 201 karakterden daha kısa ise, eksik olan kısımlar sıfırlar ile doldurulacaktır.
 
@@ -71,7 +71,7 @@ Metin ön işleme için `txt2t7.py` dosyasındaki 49. satıra, veri setinizdeki 
 python3 txt2t7.py
 ```
 
-### modelin eğitimi
+### **modelin eğitimi**
 
 Görsel ve metin dosyaları hazırlandıktan sonra, her bir sınıf için elinizde bir tane `.t7` dosyası olması gerekiyor.
 
@@ -127,14 +127,14 @@ python3 sje_eval.py --seed 123 --use_gpu True --dataset birds --model_type cvpr 
 
 ***
 
-## Değerlendirme:
+## **Değerlendirme**
 
 ![Screenshot from 2024-10-26 07-28-30](https://github.com/user-attachments/assets/202b9301-cbef-4afb-8772-26e1252a59ff)
 
 
 ***
 
-## kaynaklar:
+## **kaynaklar**
 
 [Char-CNN-RNN for PyTorch GitHub](https://github.com/martinduartemore/char_cnn_rnn_pytorch/tree/master)
 
