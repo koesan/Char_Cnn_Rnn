@@ -162,7 +162,8 @@ python3 sje_eval.py --seed 123 --use_gpu True --dataset birds --model_type cvpr 
 
 ## ** Metin gömmeleri oluşturmak**
 
-** Önceden eğitilmiş modelleri indirmek için **
+**Önceden eğitilmiş modelleri indirmek için**
+
 [cvpr](https://github.com/reedscot/cvpr2016)
 
 [icml](https://github.com/reedscot/icml2016)
