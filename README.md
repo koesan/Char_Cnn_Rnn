@@ -147,7 +147,10 @@ dataset/
 
 To train the model, run the code in the project folder. Enter the path of your dataset in `data_dir`.
 
-For a multi-class model, line 41 in the `sje_train.py` file should read `MultimodalDataset`. For a single class, change line 41 to `SinglemodalDataset`.
+> [!NOTE]
+>
+> For a multi-class model, line 41 in the `sje_train.py` file should read `MultimodalDataset`. For a single class, change line 41 to `SinglemodalDataset`.
+> 
 
 ```bash
 python3 sje_train.py --seed 123 --use_gpu True --dataset birds --model_type cvpr --data_dir "file path" --train_split trainval --learning_rate 0.0007 --symmetric True --epochs 200 --checkpoint_dir ckpt --save_file sje_cub_c10_hybrid
