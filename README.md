@@ -35,7 +35,11 @@ Dataset used in the project:
 
 ## **Usage**
 
-First, you need to create a dataset with `txt` and `img` files. The dataset structure should be in the following format. The dataset can be single-class or multi-class, and images can be `.jpg`, `.png`, or `.jpeg`.
+First, you need to create a dataset with `txt` and `img` files. The dataset structure should be in the following format. 
+
+> [!NOTE]
+> The dataset can be single-class or multi-class, and images can be `.jpg`, `.png`, or `.jpeg`.
+> 
 
 ---
 
@@ -159,11 +163,10 @@ python3 sje_eval.py --seed 123 --use_gpu True --dataset birds --model_type cvpr 
 
 ## **Creating Text Embeddings**
 
-**To download pre-trained models:**
-
-[cvpr](https://github.com/reedscot/cvpr2016)
-
-[icml](https://github.com/reedscot/icml2016)
+> [!NOTE]
+> **To download pre-trained models:**
+> [cvpr](https://github.com/reedscot/cvpr2016)
+> [icml](https://github.com/reedscot/icml2016)
 
 To embed text with the trained model, enter the model path in `model_path` on line 42 of the `Text_embedding.py` file. Then, enter the path of the txt files you want to embed in `root_dir`.
 
