@@ -174,7 +174,7 @@ python3 sje_eval.py --seed 123 --use_gpu True --dataset birds --model_type cvpr 
 > 
 > [icml](https://github.com/reedscot/icml2016)
 
-To embed text with the trained model, enter the model path in `model_path` on line 42 of the `Text_embedding.py` file. Then, enter the path of the txt files you want to embed in `root_dir`.
+To embed text with the trained model, enter the model path in `model_path` on line 42 of the `Text_embedding.py` file. Then, enter the path of the txt files you want to embed in `root_dir`, and then run it.
 
 ```bash
 python3 Text_embedding.py
