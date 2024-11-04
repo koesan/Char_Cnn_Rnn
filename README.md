@@ -1,4 +1,3 @@
-
 # **Char-CNN-RNN**
 
 This project aims to develop the Char-CNN-RNN model using our own dataset and to embed our textual data.
@@ -154,7 +153,7 @@ python3 sje_eval.py --seed 123 --use_gpu True --dataset birds --model_type cvpr 
 
 > [!NOTE]
 > 
-> **To download pre-trained models**
+> **Download pre-trained models**
 > 
 > [cvpr](https://github.com/reedscot/cvpr2016)
 > 
