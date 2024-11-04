@@ -3,20 +3,6 @@
 
 This project aims to develop the Char-CNN-RNN model using our own dataset and to embed our textual data.
 
-The model is quite successful in tasks that require detailed descriptions like text-image matching and text-to-image.
-
-### Why Char-CNN-RNN?
-The Char-CNN-RNN model is used in situations requiring high detail and accuracy for recognizing visually similar objects (e.g., different bird species). The character-level CNN and RNN structure makes the model resistant to typos by learning the character sequence in descriptions. With these features, it is successful in zero-shot learning scenarios.
-
-### How Does It Work?
-The Char-CNN-RNN model encodes text and images in a common feature space, creating a strong match between the two modalities. This allows the model to make correct predictions based on text descriptions, even for images it has never seen before.
-
-### Advantages Over Traditional Embedding Models
-Unlike word-based embedding models like Word2Vec or GloVe, Char-CNN-RNN:
-- Processes characters directly, making it resilient to variations in word forms.
-- Learns context dynamically, enhancing its ability to distinguish similar classes.
-- Is resistant to typos and works flexibly without relying on a fixed vocabulary.
-
 ---
 
 ## **Requirements**
