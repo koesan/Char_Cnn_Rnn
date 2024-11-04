@@ -160,7 +160,9 @@ python3 sje_eval.py --seed 123 --use_gpu True --dataset birds --model_type cvpr 
 > 
 > [icml](https://github.com/reedscot/icml2016)
 >
-> If you see the error _pickle.UnpicklingError: invalid load key, '\x03' or a similar problem when loading pre-trained models, try installing the torchfile module and using torchfile.load() instead of torch.load(). To embed text with the trained model, enter the model path in `model_path` on line 42 of the `Text_embedding.py` file. Then, enter the path of the txt files you want to embed in `root_dir`, and then run it.
+> If you see the error _pickle.UnpicklingError: invalid load key, '\x03' or a similar problem when loading pre-trained models, try installing the torchfile module and using torchfile.load() instead of torch.load().
+
+To embed text with the trained model, enter the model path in `model_path` on line 42 of the `Text_embedding.py` file. Then, enter the path of the txt files you want to embed in `root_dir`, and then run it.
 
 ```bash
 python3 Text_embedding.py
