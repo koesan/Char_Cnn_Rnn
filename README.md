@@ -163,7 +163,7 @@ python3 sje_eval.py --seed 123 --use_gpu True --dataset birds --model_type cvpr 
 
 ## **Creating Text Embeddings**
 
-> [!To download pre-trained models:]
+> [**To download pre-trained models**]
 > 
 > [cvpr](https://github.com/reedscot/cvpr2016)
 > 
